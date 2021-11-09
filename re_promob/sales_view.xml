@@ -1,0 +1,1355 @@
+<?xml version="1.0"?>
+<odoo>
+
+        <record model="ir.ui.view" id="search_re_promob_sale_order">
+            <field name="name">search.re.sale.order.blanket</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"></field>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="blanket_order_id" string="Acuerdo"/>
+                </field>
+                <xpath expr="//filter[@name='my_sale_orders_filter']" position="after">
+                    <filter name="claim" string="Es Reclamo" domain="[('claim','=', True)]"/>
+                </xpath>
+            </field>
+        </record>
+
+
+
+        <record id="act_res_partner_2_sale_blanket_order" model="ir.actions.act_window">
+            <field name="name">Acuerdos</field>
+            <field name="res_model">sale.blanket.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="context">{'search_default_partner_id': active_id}</field>
+            <field name="groups_id" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+        </record>
+
+        <record id="re_analytic_line_tree" model="ir.ui.view">
+            <field name="name">re.analytic.line.tree</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_line_tree" />
+            <field name="arch" type="xml">
+		<field name="account_id" position="after">
+			<field name="blanket_order_id" />
+			<field name="tipo_pedido" />
+		</field>
+            </field>
+        </record>
+
+
+        <record id="re_account_move_tree" model="ir.ui.view">
+            <field name="name">re.account.move.tree</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_tree" />
+            <field name="arch" type="xml">
+		<field name="journal_id" position="after">
+			<field name="blanket_order_id" />
+			<field name="franchise_id" />
+			<field name="blanket_amount" string="Cuenta Corriente Acuerdo" sum="Cuenta Corriente Acuerdo"/>
+		</field>
+            </field>
+        </record>
+
+
+
+
+        <record id="re_sale_crm_case_form_view_oppor_log" model="ir.ui.view">
+            <field name="name">re.sale_crm.case.form.view.oppor.log</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="re_franquicia.crm_lead_franquicia" />
+            <field name="arch" type="xml">
+		<xpath expr="//notebook/page[@name='amob_reno']" position="inside">
+			<group string="Logs">
+				<field name="log_ids" readonly="1" />
+			</group>
+		</xpath>
+            </field>
+        </record>
+
+        <record id="re_sale_crm_case_form_view_oppor" model="ir.ui.view">
+            <field name="name">re.sale_crm.case.form.view.oppor</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="sale_crm.crm_case_form_view_oppor" />
+            <field name="arch" type="xml">
+		<button name="%(sale_crm.sale_action_quotations_new)d" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</button>
+            </field>
+        </record>
+
+        <record id="res_partner_view_buttons_blanket" model="ir.ui.view">
+            <field name="name">res.partner.view.buttons.blanket</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="priority" eval="3"/>
+            <!-- field name="groups_id" eval="[(4, ref('sales_team.group_sale_salesman'))]"/ -->
+            <field name="arch" type="xml">
+		<notebook>
+			<page string="Acuerdos">
+				<field name="blanket_ids" readonly="1" />
+			</page>
+		</notebook>
+            </field>
+        </record>
+
+
+
+        <record model="ir.ui.view" id="re_promob_account_payment_group_form">
+            <field name="name">re.promob.account.payment.group.form</field>
+            <field name="model">account.payment.group</field>
+	    <field name="inherit_id" ref="account_payment_group.view_account_payment_group_form"></field>
+            <field name="arch" type="xml">
+		<field name="state" position="before">
+			<button name="apply_to_blanket" string="Aplicar a acuerdo" type="object" states="posted"/>
+			<button name="aplicar_a_documento" string="Aplicar a documento" type="object" states="posted"/>
+		</field>
+		<notebook>
+			<page string="Acuerdos">
+				<group>
+					<field name="list_price" readonly="1" />
+					<field name="amount_available_to_apply" readonly="1" />
+					<field name="amount_applied" readonly="1" />
+					<field name="analytic_ids">
+						<tree create="0" edit="0" delete="0">
+							<field name="date" />
+							<field name="ref" />
+							<field name="name" />
+							<field name="account_id" />
+							<field name="company_id" />
+							<field name="amount" />
+							<button name="unapply_payment" type="object" string="Desaplicar" />
+						</tree>
+					</field>
+				</group>
+			</page>
+		</notebook>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="re_promob_account_payment_group_tree">
+            <field name="name">re.promob.account.payment.group.tree</field>
+            <field name="model">account.payment.group</field>
+            <field name="inherit_id" ref="account_payment_group.view_account_payment_group_tree"></field>
+            <field name="arch" type="xml">
+                <field name="payments_amount" position="after">
+                    <field name="amount_available_to_apply" sum="Total"/>
+                    <field name="amount_applied" sum="Total"/>
+                </field>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="tree_re_promob_account_det_line">
+            <field name="name">tree.re.promob.account.debt.line</field>
+            <field name="model">account.debt.line</field>
+	    <field name="inherit_id" ref="account_debt_management.view_account_debt_line_tree"></field>
+            <field name="arch" type="xml">
+		<field name="partner_id" position="after">
+			<field name="final_partner_id" readonly="1"/>
+			<field name="blanket_order_id" readonly="1"/>
+		</field>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="tree_re_promob_account_move_line">
+            <field name="name">tree.re.promob.account.move.line</field>
+            <field name="model">account.move.line</field>
+	    <field name="inherit_id" ref="account.view_move_line_tree"></field>
+            <field name="arch" type="xml">
+		<field name="partner_id" position="after">
+			<field name="final_partner_id" readonly="1"/>
+			<field name="franchise_id" readonly="1"/>
+			<field name="blanket_order_id" readonly="1"/>
+			<field name="tag_acuerdo_inicial" readonly="1"/>
+		</field>
+		<field name="company_id" position="after">
+			<field name="amount_residual" />
+			<field name="main_blanket_line" />
+		</field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="form_re_promob_account_move_line">
+            <field name="name">form.re.promob.account.move.line</field>
+            <field name="model">account.move.line</field>
+	    <field name="inherit_id" ref="account.view_move_line_form"></field>
+            <field name="arch" type="xml">
+		        <field name="blocked" position="after">
+			        <field name="tag_acuerdo_inicial" readonly="1"/>
+			        <field name="blanket_order_id" readonly="1"/>
+        			<button name="desaplicar" string="Desaplicar" type="object" attrs="{'invisible': [('blanket_order_id','=',False)]}"/>
+		        </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="search_re_promob_account_move_line">
+            <field name="name">search.re.promob.account.move.line</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="account.view_account_move_line_filter"></field>
+            <field name="arch" type="xml">
+                <field name="account_id" position="after">
+                    <field name="blanket_order_id" />
+                    <field name="tag_acuerdo_inicial"/>
+                    <field name="analytic_tag_ids" string="Analytic Tags" filter_domain="[('analytic_tag_ids','ilike', self)]"/>
+                </field>
+                <filter name="payable" position="after">
+                    <filter string="Linea Principal Acuerdo" domain="[('main_blanket_line', '=', True)]" name="main_line_filter"/>
+                    <filter string="Saldos Inicial Ds por vtas (ARS)" domain="[('tag_acuerdo_inicial', '!=',False)]" name="tag_acuerdo_inicial_filter"/>
+                    <filter string="Franchise Invoice" name="franchise_invoice" domain="[('invoice_to', '=', 'auto')]"/>
+                    <filter string="Final client Invoice" name="final_invoice" domain="[('invoice_to', '=', 'manual')]"/>
+                </filter>
+                <group>
+                    <filter name="invoice_to" string="Invoice to" domain="[]" context="{'group_by':'invoice_to'}"/>
+                </group>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="form_re_promob_account_move">
+            <field name="name">form.re.promob.account.move</field>
+            <field name="model">account.move</field>
+	    <field name="inherit_id" ref="account.view_move_form"></field>
+            <field name="arch" type="xml">
+		<xpath expr="//field[@name='line_ids']/tree/field[@name='partner_id']" position="after">
+			<field name="final_partner_id" readonly="1"/>
+		</xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="form_re_promob_product_product">
+            <field name="name">form.re.promob.product.product</field>
+            <field name="model">product.product</field>
+	    <field name="inherit_id" ref="product.product_normal_form_view"></field>
+            <field name="arch" type="xml">
+		<field name="barcode" position="after">
+			<field name="blanket_order" />
+			<field name="no_ambiente" />
+			<field name="is_transport" />
+			<field name="is_transport" />
+			<field name="codigotipoentidad" readonly="1" />
+			<field name="desenho" readonly="1" />
+			<field name="item_base" readonly="1" />
+			<field name="unique_file_id" readonly="1" />
+		</field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="form_re_promob_account_invoice">
+            <field name="name">form.re.promob.account.invoice</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"></field>
+            <field name="arch" type="xml">
+		        <field name="partner_id" position="after">
+			        <field name="final_partner_id" string="Cliente final"/>
+                    <field name="blanket_order_id" readonly="1" />
+                </field>
+                <field name="state" position="before">
+                    <button name="btn_apply_invoice_blanket" string="Aplicar a acuerdo" type="object"
+                        attrs="{'invisible': [('type','in',['in_invoice','in_refund'],('blanket_order_id','=',False))], 'readonly': [('state','!=','open')]}" />
+                    <button name="generar_reversion" string="Generar Asientos de Reversión" type="object"
+                        attrs="{'invisible': [('type','in',['in_invoice','in_refund'])], 'readonly': [('state','!=','open')]}" />
+                </field>
+                <field name="tax_line_ids" position="after">
+                    <group name="re_promob_info">
+                        <group name="assigned_orders" string="Assigned orders" groups="account.group_account_invoice">
+                            <field name="to_apply"/>
+                            <field name="invoice_asigned_ids" nolabel="1" colspan="2">
+                                <tree editable="0" create="0">
+                                    <field name="order_id"/>
+                                    <field name="invoice_id"/>
+                                    <field name="apply_amount"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group name="right">
+
+                        </group>
+                    </group>
+                </field>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="form_re_res_partner_promob">
+            <field name="name">form.re.promob.res.partner</field>
+            <field name="model">res.partner</field>
+	    <field name="inherit_id" ref="re_franquicia.res_partner_franquicia"></field>
+            <field name="groups_id" eval="[(4, ref('re_sale_security.group_reno_technical_user'))]"/>
+            <field name="arch" type="xml">
+		<xpath expr="//notebook/page[@name='amob_reno']" position="inside">
+			<group>
+				<field name="credit_limit" />
+				<field name="deviation_percent" />
+				<field name="cod_bejerman" />
+				<field name="is_transport" />
+				<field name="transport_id" />
+				<field name="franchise_category_id" />
+			</group>
+		</xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="form_re_project_sale_blanket_order">
+            <field name="name">form.re.project.sale.blanket.order</field>
+            <field name="model">project.project</field>
+	        <field name="inherit_id" ref="re_project.form_re_project_project"/>
+            <field name="arch" type="xml">
+	            <xpath expr="//page[@name='amob_reno']" position="inside">
+		            <field name="blanket_order_id" readonly="1" />
+	            </xpath>
+	            <xpath expr="//header" position="inside">
+		            <button name="create_tasks" type="object" string="Crear tareas" />
+	            </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tree_re_sale_blanket_order">
+            <field name="name">tree.re.sale.blanket.order</field>
+            <field name="model">sale.blanket.order</field>
+	    <field name="inherit_id" ref="sale_blanket_order.view_blanket_order_tree"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="default_order">id desc</attribute>
+                </xpath>
+                <field name="state" position="after">
+                    <field name="lp_reno"/>
+                    <field name="franchise_percent"/>
+                    <field name="percent"/>
+                    <field name="additional_discount"/>
+                    <!-- field name="residual_amount" />
+                    <field name="delivered_amount" / -->
+                    <field name="main_blanket_line_residual" />
+                    <field name="amount_invoiced_residual" />
+                    <field name="payment_receipt_residual" />
+                </field>
+                <field name="partner_id" position="after">
+                    <field name="final_partner_id" />
+                </field>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="re_promob_mrp_bom_filter">
+            <field name="name">re_promob_mrp_bom_filter</field>
+            <field name="model">mrp.bom</field>
+    	    <field name="inherit_id" ref="mrp.view_mrp_bom_filter" />
+            <field name="arch" type="xml">
+		        <xpath expr="//filter[@name='inactive']" position="after">
+                    <filter string="Controlada" name="controlada" domain="[('lista_controlada','=',True)]"/>
+                    <filter string="No Controlada" name="nocontrolada" domain="[('lista_controlada','=',False)]"/>
+		        </xpath>
+		        <xpath expr="//filter[@name='routings']" position="after">
+                       <filter string="Lista Controlada" name="lista_controlada_filter" context="{'group_by':'lista_controlada'}"/>
+		        </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="re_mrp_bom_promob_form_view">
+            <field name="name">form.re.mrp.bom.promob</field>
+            <field name="model">mrp.bom</field>
+    	    <field name="inherit_id" ref="mrp.mrp_bom_form_view"></field>
+            <field name="arch" type="xml">
+		        <field name="company_id" position="after">
+			        <field name="ambiente_id" />	
+			        <field name="promob_item_id" />	
+			        <field name="promob_item_code" />	
+			        <field name="lista_controlada" readonly="1"/>	
+		        </field>
+	            <div name='button_box' position="before">
+        			<button name="marcar_controlada" type="object" string="Marcar como controlada" attrs="{'invisible': [('lista_controlada','=',True)]}"/>
+	            </div>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="re_uom_uom_promob_form_view">
+            <field name="name">form.re.uom.uom.promob</field>
+            <field name="model">uom.uom</field>
+	    <field name="inherit_id" ref="uom.product_uom_form_view"></field>
+            <field name="arch" type="xml">
+		<field name="rounding" position="after">
+			<field name="promob_code" />	
+		</field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="re_sale_blanket_order_ambiente_form_view">
+            <field name="name">form.re.sale.blanket.order.ambiente</field>
+            <field name="model">sale.blanket.order.ambiente</field>
+            <field name="arch" type="xml">
+		<form string="Ambiente">
+			<header>
+				<button name="explode_bom" type="object" string="Generar estructura" />
+			</header>
+			<sheet>
+				<group>
+					<field name="name" readonly="1" />
+					<field name="promob_id" readonly="1"/>
+					<field name="promob_name" readonly="1"/>
+					<field name="depto_id" />
+				</group>
+				<notebook>
+					<page string="Contenidos de XML">
+						<group>
+							<field name="xml_contents" readonly="1" />
+						</group>
+					</page>
+					<page string="Pedidos y productos">
+						<group>
+							<field name="blanket_order_id" readonly="1" />
+							<field name="blanket_order_line_id" readonly="1" />
+							<field name="product_ids" readonly="1" />
+							<field name="bom_id" readonly="1" />
+							<field name="unique_file_id" readonly="1" />
+						</group>
+					</page>
+				</notebook>
+			</sheet>
+		</form>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="re_sale_blanket_order_promob_form_view">
+            <field name="name">form.re.sale.blanket.order.promob</field>
+            <field name="model">sale.blanket.order.promob</field>
+            <field name="arch" type="xml">
+		<form string="Promob">
+			<group>
+				<field name="tipologia" required="1"/>
+				<field name="promob_file" filename="promob_file_name" />
+				<field name="promob_file_name" readonly="1"/>
+				<field name="qty" />
+			</group>
+		</form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="re_sale_blanket_order_promob_def_form_view">
+            <field name="name">form.re.sale.blanket.order.promob.def</field>
+            <field name="model">sale.blanket.order.promob.def</field>
+            <field name="arch" type="xml">
+		<form string="Promob">
+			<group>
+				<field name="tipologia" required="1"/>
+				<field name="promob_file" filename="promob_file_name" />
+				<field name="promob_file_name" readonly="1"/>
+				<field name="qty" />
+			</group>
+		</form>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="re_sale_blanket_order_line_form_view">
+            <field name="name">form.re.sale.blanket.order.line</field>
+            <field name="model">sale.blanket.order.line</field>
+            <field name="arch" type="xml">
+		<form string="Linea de pedido">
+			<group>
+				<field name="order_id" readonly="1" string="Pedido"/>
+				<field name="product_id" string="Producto"/>
+				<field name="tipo_pedido" string="Tipo Pedido"/>
+				<field name="state" invisible="1"/>
+			</group>
+			<group>
+				<field name="original_uom_qty" string="Cantidad"/>
+				<field name="price_unit" string="Precio"/>
+			</group>
+			<group string="Archivo Promob" attrs="{'invisible': [('tipo_pedido','!=','unifamiliar')], 'readonly': [('state','!=','cancel')]}">
+				<field name="promob_file" filename="promob_file_name" />
+				<field name="promob_file_name" readonly="1"/>
+			</group>
+		</form>
+            </field>
+	</record>
+
+        <record model="ir.ui.view" id="re_sale_blanket_order_form_view">
+            <field name="name">form.re.sale.blanket.order</field>
+            <field name="model">sale.blanket.order</field>
+	    <field name="inherit_id" ref="sale_blanket_order.view_blanket_order_form" />
+            <field name="arch" type="xml">
+		<field name="amount_untaxed" position="after">
+			<field name="total_amount" />
+		</field>
+		<field name="payment_term_id" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</field>
+		<field name="company_id" position="attributes">
+			<attribute name="readonly">1</attribute>
+		</field>
+		<!-- button name="set_to_draft" position="attributes">
+			<attribute name="states">open</attribute>
+		</button -->
+		<xpath expr="//field[@name='line_ids']" position="after">
+          	<label for="percepciones"/>
+			<field name="percepciones" attrs="{'readonly': [('state','not in',['draft','open'])]}">
+	    		<tree editable="bottom">
+	        		<field name="blanket_order_id" invisible="1"/>
+        			<field name="tax_id"/>
+		        	<field name="percent"/>
+    			</tree>
+			</field>
+		</xpath>
+		<xpath expr="//field[@name='line_ids']" position="attributes">
+          	<attribute name="attrs">{'readonly': [('state', 'in', ('future_contract','future_process','done','claim','processed'))]}</attribute>
+		</xpath>
+		<xpath expr="//field[@name='line_ids']/tree/field[@name='date_schedule']" position="attributes">
+			<attribute name="string">Fecha de compromiso</attribute>
+		</xpath>
+		<xpath expr="//field[@name='line_ids']/tree/field[@name='product_id']" position="attributes">
+			<attribute name="domain">[('blanket_order','=',True)]</attribute>
+		</xpath>
+		<xpath expr="//form/sheet/group/group/field[@name='partner_id']" position="attributes">
+			<attribute name="readonly">1</attribute>
+			<attribute name="string">Franquicia</attribute>
+		</xpath>
+		<field name="partner_id" position="after">
+			<field name="final_partner_id" string="Cliente final" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
+			<field name="delivery_partner_id" string="Direccion Envio" invisible="1"/>
+		</field>
+		<field name="state" position="before">
+			<button name="control_amounts" type="object" string="Controlar Montos" invisible="1"/>
+			<button name="explain_amounts" type="object" string="Explicar Montos"/>
+			<button name="recalcular_totales_ovs" type="object" string="Recalcular totales OVs" states="processed"/>
+			<button name="calculate_amounts" type="object" string="Recalcular Montos" states="draft,open,claim"/>
+			<button name="add_deptos" type="object" string="Agregar departamentos" 
+				attrs="{'invisible': ['|',('state','not in',['draft','open']),('tipo_pedido','=','unifamiliar')]}"/>
+			<button name="create_orders" type="object" string="Crear ordenes" states="done,partial" />
+			<button name="mark_processed" type="object" string="Marcar Procesado" states="done" invisible="1" />
+			<button name="action_set_in_process" type="object" string="Enviar a Fabrica" states="open" />
+			<button name="action_process_claim" type="object" string="Validar Reclamo" states="claim" />
+			<button name="action_set_future_process" type="object" string="Pasar a Proceso Futuro" states="future_contract" groups="re_sale_security.group_reno_technical_user"/>
+			<button name="action_sent_to_manufacturing" type="object" string="Pedido Definitivo" states="future_process" />
+			<button name="action_mark_done" type="object" string="Enviar a Fabrica" states="partial" />
+			<button name="action_to_processed" type="object" string="Marcar Procesado" states="done" />
+			<button name="action_reject" type="object" string="Cancelar" states="draft,open,claim,future_contract,future_process,done" confirm="¿Desea continuar?"/>
+			<button name="action_back_to_draft" type="object" string="Volver a borrador/proyecto creado" states="draft,open,future_contract,future_process,done"
+				groups="re_sale_security.group_reno_technical_user"/>
+			<!-- button name="create_project" type="object" string="Crear proyecto" states="open" / -->
+		</field>
+		<field name="state" position="attributes">
+			 <attribute name="statusbar_visible"></attribute>
+		</field>
+		<!-- xpath expr="//button[@string='Crear Pedidos']" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath -->
+		<xpath expr="//field[@name='line_ids']/tree/field[@name='taxes_id']" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath>
+		<xpath expr="//field[@name='line_ids']/tree/field[@name='price_subtotal']" position="after">
+			<field name="discount" />
+			<field name="tipo_pedido" invisible="1" />
+			<field name="promob_file" filename="promob_file_name" attrs="{'invisible': [('tipo_pedido','!=','unifamiliar')]}" readonly="1"/>
+			<field name="promob_file_name" invisible="1"/>
+			<button name="add_xml_file" string="Agregar archivo" type="object" 
+				attrs="{'invisible': [('tipo_pedido','!=','unifamiliar')]}" />
+			<field name="promob_url" widget="url"/>
+		</xpath>
+		
+		<field name="validity_date" position="after">
+			<field name="drafted" readonly="1"/>
+			<field name="tipo_pedido" />
+			<field name="link_folder_16" widget="url"/>
+			<field name="acuerdo_futuro"/>
+			<field name="claim"/>
+			<field name="final_delivery_partner_id" domain="[('customer','=',True)]" string="Dir.Entrega Cliente Final"/>
+			<field name="id" invisible="1"/>
+			<field name="available_carrier_ids" invisible="1"/>
+			<field name="transport_id" options="{'no_quick_create': True, 'no_create_edit' : True}" required="1"/>
+			<field name="delivery_address_id" options="{'no_quick_create': True, 'no_create_edit' : True}" required="1"
+					domain="[('parent_id','=',transport_id)]" attrs="{'readonly': [('state', 'not in', ('draft', 'open'))]}" />
+			<field name="final_delivery_address_id" options="{'no_quick_create': True, 'no_create_edit' : True}" required="1"
+					domain="[('parent_id','=',transport_id)]"  attrs="{'readonly': [('state', 'not in', ('draft', 'open'))]}" />
+                      	<label for="carrier_id"/>
+                      	<div name='carrier_selection'>
+                          <div>
+                            <field name="carrier_id" domain="[('id', 'in', available_carrier_ids)]" context="{'order_id': id}" class="oe_inline" options="{'no_create': True, 'no_open': True}" attrs="{'readonly':[('state','not in',('draft'))]}"/>
+				<i class="fa fa-check text-success" role="img" aria-label="Rating OK" title="Rating OK" 
+					attrs="{'invisible':['|','|',('carrier_id','=',False),('state','not in',('draft')),('delivery_rating_success','=',False)]}"></i>
+                          </div>
+                          <div>
+                            <field name='delivery_price' class="oe_inline" nolabel="1" attrs="{'invisible': [('carrier_id','=', False)]}" force_save="1"/>
+                            <button name="get_delivery_price" type="object" class="oe_inline oe_link" attrs="{'invisible':['|',('carrier_id','=',False),('state','not in',('draft'))]}" invisible="1">
+				<i class="fa fa-arrow-right"/> Calcular Envio</button>
+                            <button name="set_delivery_line" type="object" class="oe_inline oe_link" 
+				attrs="{'invisible':['|','|',('carrier_id','=',False),('state','not in',('draft')),('delivery_rating_success','=',False)]}" invisible="1">
+				<i class="fa fa-arrow-right"/> Agregar a Acuerdo</button>
+                            <field name='delivery_rating_success' invisible="1" force_save="1"/>
+                          </div>
+                      </div>
+
+
+		</field>
+		<notebook>
+			<page string="Amoblamientos Reno" name="amob_reno">
+				<!-- group string="Adelantos">
+					<field name="payment_group_ids" 
+						states="draft,sent" domain="[('partner_id','=',partner_id),('state','=','posted')]" 
+						options="{'no_quick_create': True, 'no_create_edit' : True}">
+						<tree>
+							<field name="display_name" />
+							<field name="payment_date" />
+							<field name="payments_amount" />
+							<field name="state" />
+						</tree>
+					</field>
+				</group -->
+				<group string="Grupo de Ventas">
+                                        <field name="franchise_id" readonly="1"/>
+                                        <field name="operating_unit_id" readonly="1"/>
+                                        <field name="team_id" readonly="1"/>
+                                        <field name="user_id" readonly="1"/>
+                                        <field name="team_user_id" force_save="1" readonly="1"/>
+                                        <field name="group_id" readonly="1"/>
+                                        <field name="project_id" readonly="1"/>
+                                        <field name="analytic_account_id" readonly="1"/>
+				</group>
+				<group string="Promob" attrs="{'invisible': [('tipo_pedido','=','unifamiliar')]}">
+					<field name="promob_file_ids" >
+						<tree string="Archivos">
+							<field name="name" />
+							<field name="promob_file" filename="promob_file_name"/>
+							<!-- field name="promob_file_name" / -->
+							<field name="qty" />
+						</tree>	
+					</field>
+				</group>
+				<group string="Deptos" attrs="{'invisible': [('tipo_pedido','=','unifamiliar')]}">
+					<field name="depto_ids">
+						<tree string="Deptos" editable="bottom" delete="0" create="0">
+							<field name="blanket_order_id" invisible="1"/>
+							<field name="product_id" readonly="1"/>
+							<field name="display_name" readonly="1"/>
+							<field name="amount" readonly="1"/>
+							<field name="commitment_date"/>
+							<field name="promob_ids" widget="many2many_tags" 
+								options="{'no_create': True, 'no_create_edit':True}"
+								domain="[('blanket_order_id','=',blanket_order_id)]"/>
+						</tree>
+					</field>
+					<group>
+						<field name="amount_deptos" />
+					</group>
+				</group>
+			</page>
+			<page string="Acuerdo con Reno" name="acuerdo_reno" >
+				<group>
+					<field name="amount_untaxed"/>
+					<field name="lp_reno" readonly="1" options="{'no_open': True}"/>
+					<field name="franchise_percent" readonly="1"/>
+					<field name="additional_discount" attrs="{'readonly': [('state', 'not in', ('draft', 'open'))]}"/>
+					<field name="percent" readonly="1"/>
+					<field name="condition_id"  options="{'no_quick_create': True, 'no_create_edit' : True}" />
+					<field name="muebles_readonly" invisible="1"/>
+					<field name="muebles_especiales" attrs="{'readonly': [('muebles_readonly','=',False)]}" />
+				</group>
+			</page>
+			<page string="Acuerdo con Cliente Final" name="acuerdo_cliente_final" >
+				<group>
+                    <group string='' name='acuerdo_cliente_final'>
+                        <field name="amount_untaxed" string='Monto de venta:total'/>
+                        <field name="lp_final_customer"/>
+                        <field name="sena" />
+                        <field name="additional_charge" />
+                        <field name="descuento"/>
+                        <field name="adj_crm" widget="url"/>
+                    </group>
+                    <group string='Cond. Payment' name='cond_payment'>
+                        <field name="advance" />
+                        <field name="exchange" />
+                        <field name="upon_delivery" />
+                        <field name="against_certification" />
+                    </group>
+				</group>
+				<group>
+                    <group string='Datos Extras' name='info_extra'>
+                        <field name="repair_fund"/>
+                        <field name="surety_financial_advanceund" />
+                        <field name="surety_repair_fund" />
+                        <field name="note"/>
+                    </group>
+                    <group string='Project' name='project'>
+                        <field name="proyect_id" />
+                        <field name="street" />
+                        <field name="city" />
+                        <field name="state_id" />
+                        <field name="operating_id" />
+                    </group>
+				</group>
+			</page>
+			<page string="Acuerdo Definitivo" name="acuerdo_definitivo" attrs="{'invisible': [('acuerdo_futuro','=',False)]}"
+				groups="re_sale_security.group_reno_technical_user" >
+				<group string="Promob Definitivo" >
+					<field name="promob_file_def_ids" >
+						<tree string="Archivos">
+							<field name="name" />
+							<field name="promob_file" filename="promob_file_name"/>
+							<!-- field name="promob_file_name" / -->
+							<field name="qty" />
+						</tree>	
+					</field>
+				</group>
+				<group string="Deptos" >
+					<field name="depto_def_ids" >
+						<tree string="Deptos" editable="bottom" >
+							<field name="blanket_order_id" invisible="1"/>
+							<field name="product_id" readonly="1" />
+							<field name="depto_id" readonly="1" />
+							<field name="name" />
+							<field name="commitment_date"/>
+							<field name="amount" readonly="1"/>
+							<field name="promob_ids" widget="many2many_tags" 
+								options="{'no_create': True, 'no_create_edit':True}"
+								domain="[('blanket_order_id','=',blanket_order_id)]"/>
+						</tree>	
+					</field>
+					<group>
+						<field name="amount_final_deptos" />
+					</group>
+				</group>
+			</page>
+			<page string="Items Pedidos" name="items_pedidos" >
+				<group string="Items Pedidos">
+					<field name="items_pedidos_ids">
+						<tree string="Items" >
+							<field name="ambiente_id" readonly="1"/>
+							<field name="order_id" readonly="1"/>
+							<button name="create_ambiente_pedido" type="object" string="Crear SO" 
+								attrs="{'invisible': [('order_id','>',0)]}"/>
+							<button name="generate_structures" type="object" string="Crear Estructuras" />
+						</tree>
+					</field>
+				</group>
+			</page>
+			<!-- page string="Ambientes" name="ambientes" >
+				<group string="Ambientes">
+					<field name="ambiente_ids">
+						<tree string="Ambientes" edit="0" delete="0" create="0">
+							<field name="name" readonly="1"/>
+							<field name="promob_name" readonly="1"/>
+							<field name="depto_id" readonly="1"/>
+							<field name="promob_id" readonly="1"/>
+							<field name="depto_def_id" readonly="1"/>
+							<field name="promob_def_id" readonly="1"/>
+							<field name="blanket_order_line_id" readonly="1"/>
+						</tree>
+					</field>
+				</group>
+			</page -->
+			<page string="Cuenta Corriente" name="ctacte">
+				<group name="cta_cte">
+                    <group name="left" string="Resumen Cuenta Corriente">
+                        <field name="residual_a" />
+                        <field name="residual_b" />
+                        <field name="saldo_residuales"/>
+                        <field name="main_blanket_line_residual" />
+                        <field name="amount_invoiced_residual" />
+                        <field name="payment_receipt_residual" />
+                        <!-- button name="apply_payments" type="object" string="Aplicar pagos" / -->
+                        <field name="delivered_amount" readonly="1" string="Exigible Contraentrega"/>
+                    </group>
+                    <group name="right" string="Compute sale order">
+                        <field name="total_orders"/>
+                        <field name="total_invoices"/>
+                        <field name="diff_to_orders"/>
+                        <field name="diff_to_invoice"/>
+                    </group>
+				</group>
+				<!-- group string="Cuenta Corriente" -->
+				<!-- label for="analytic_ids" string="Movimientos Cuenta Corriente" />
+				<field name="analytic_ids" readonly="1" nolabel="1">
+					<tree string="Cuenta Corriente">
+						<field name="date" />
+						<field name="ref" />
+						<field name="sale_order_id" />
+						<field name="invoice_id" />
+						<field name="company_id" />
+						<field name="unit_amount" />
+						<field name="amount" />
+					</tree>
+				</field -->
+				<!-- /group -->
+				<label for="move_ids" string="Movimientos Cuenta Corriente" />
+				<field name="move_ids" readonly="1" nolabel="1">
+					<tree string="Cuenta Corriente">
+						<field name="date" />
+						<field name="name" />
+						<field name="ref" />
+						<field name="company_id" />
+						<field name="blanket_amount" />
+						<field name="state" />
+					</tree>
+				</field>
+				<label for="move_line_ids" string="Lineas de Movimientos Cuenta Corriente" />
+				<!--field name="move_line_ids" readonly="1" nolabel="1">
+					<tree string="Cuenta Corriente">
+						<field name="date" />
+						<field name="move_id"/>
+						<field name="name" />
+						<field name="account_id"/>
+						<field name="journal_id"/>
+						<field name="balance" string="Monto"/>
+						<field name="company_id"/>
+					</tree>
+				</field-->
+				<field name="move_lines_filtradas" readonly="1" nolabel="1">
+					<tree string="Cuenta Corriente">
+						<field name="date" />
+						<field name="move_id"/>
+						<field name="name" />
+						<field name="account_id"/>
+						<field name="journal_id"/>
+						<field name="balance" string="Monto"/>
+						<field name="company_id"/>
+					</tree>
+				</field>
+				<!-- /group -->
+				<label for="invoice_ids" string="Facturas" />
+				<field name="invoice_ids" readonly="1" nolabel="1">
+					<tree>
+						<field name="date_invoice" />
+						<field name="display_name" />
+						<field name="company_id" />
+						<field name="amount_total_signed" />
+						<field name="residual_signed" />
+						<field name="state" />
+					</tree>
+				</field>
+				<!-- label for="move_line_ids" string="Imputaciones Contables" />
+				<field name="move_line_ids" readonly="1">
+					<tree>
+						<field name="date" />
+						<field name="move_id" />
+						<field name="name" />
+						<field name="company_id" />
+						<field name="internal_group" />
+						<field name="account_id" />
+						<field name="debit" />
+						<field name="credit" />
+					</tree>
+				</field -->
+			</page>
+			<page string="Calidad" name="quality" attrs="{'invisible': [('claim', '=', False)]}">
+				<group>
+                    <group name="charge">
+                        <field name="blanket_origin_id" attrs="{'required':[('claim', '=', True), ('use_other_origin', '=', False)]}"/>
+                        <field name="use_other_origin"/>
+                        <field name="other_origin" attrs="{'readonly': [('use_other_origin', '=', False)], 'required':[ ('use_other_origin', '=', True)]}"/>
+                    </group>
+                    <group name="other">
+                        <field name="non_charge" readonly="True"/>
+                        <field name="charge_percent" readonly="True" attrs="{'readonly':[('non_charge', '=', True)]}"/>
+                        <field name="count_claims" readonly="True"/>
+                    </group>
+                    <field name="claim_line_ids" nolabel="1" attrs="{'readonly': [('state', 'not in', ('claim', 'draft', 'open'))]}">
+                        <tree editable="bottom">
+                            <field name="blanket_order_id" invisible="1"/>
+                            <field name="claim_id"/>
+                            <field name="type_id"/>
+                            <field name="supply_id"/>
+                            <field name="material_id"/>
+                            <field name="model_id"/>
+                            <field name="color_id"/>
+                            <field name="drawer_id"/>
+                            <field name="problem_id"/>
+                            <field name="cause_id" force_save="1" readonly="1"/>
+                            <button name="set_cause_id_wizard" icon="fa-plus-circle" type="object" class="oe_highlight" />
+                        </tree>
+                    </field>
+				</group>
+			</page>
+		</notebook>
+            </field>
+        </record>
+
+        <record id="readonly_depto_ids_tecnica" model="ir.ui.view">
+            <field name="name">readonly_depto_ids_tecnica</field>
+            <field name="model">sale.blanket.order</field>
+            <field name="inherit_id" ref="re_sale_blanket_order_form_view" />
+            <field name="groups_id" eval="[(6,0, [ref('re_sale_security.group_reno_technical_user')])]" />
+            <field name="arch" type="xml">  
+		        <xpath expr="//field[@name='depto_ids']/tree" position="attributes">
+			        <attribute name="create">1</attribute>
+			        <attribute name="edit">1</attribute>
+			        <attribute name="delete">1</attribute>
+		        </xpath>
+		        <xpath expr="//field[@name='depto_ids']/tree/field[@name='product_id']" position="attributes">
+			        <attribute name="readonly">0</attribute>
+		        </xpath>
+		        <xpath expr="//field[@name='depto_ids']/tree/field[@name='display_name']" position="attributes">
+			        <attribute name="readonly">0</attribute>
+		        </xpath>
+		        <xpath expr="//field[@name='depto_ids']/tree/field[@name='amount']" position="attributes">
+			        <attribute name="readonly">0</attribute>
+		        </xpath>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="re_sale_blanket_order_claim_form_view">
+            <field name="name">re.sale.blanket.order.claim.form</field>
+            <field name="model">sale.blanket.order</field>
+            <field name="groups_id" eval="[(6,0,[ref('re_promob.group_sale_blanket_quality')])]"/>
+            <field name="inherit_id" ref="re_promob.re_sale_blanket_order_form_view" />
+                <field name="arch" type="xml">
+                    <xpath expr="//field[@name='non_charge']" position="attributes">
+                        <attribute name="readonly">False</attribute>
+                    </xpath>
+                    <xpath expr="//field[@name='charge_percent']" position="replace">
+                        <field name="charge_percent" attrs="{'readonly':[('non_charge', '=', True)]}"/>
+                    </xpath>
+                </field>
+        </record>
+
+        <record model="ir.ui.view" id="re_sale_blanket_order_dates_form_view">
+            <field name="name">re.sale.blanket.order.dates.form</field>
+            <field name="model">sale.blanket.order</field>
+            <field name="inherit_id" ref="re_crm_segmentation.re_crm_view_blanket_order_form"/>
+                <field name="arch" type="xml">
+                    <xpath expr="//field[@name='lead_id']" position="after">
+                        <field name="date_send_factory" force_save="1" readonly="1" />
+                        <field name="date_order_def" force_save="1" readonly="1"/>
+                        <field name="date_to_processed"/>
+                        <field name="date_to_done"/>
+                    </xpath>
+                </field>
+        </record>
+
+        <record model="ir.ui.view" id="re_sale_blanket_order_inherit_search_view">
+            <field name="name">re.sale.blanket.order.inherit.search</field>
+            <field name="model">sale.blanket.order</field>
+            <field name="inherit_id" ref="sale_blanket_order.view_blanket_order_search"/>
+                <field name="arch" type="xml">
+                    <xpath expr="//filter[@name='state_open']" position="after">
+                        <filter name="claim" string="Es Reclamo" domain="[('claim','=', True)]"/>
+                    </xpath>
+                    <xpath expr="//group" position="after">
+                        <group expand="0" string="Group By">
+                            <filter name="status" string="Status" context="{'group_by':'state'}"/>
+                            <filter name="partner" string="Partner" context="{'group_by':'partner_id'}"/>
+                            <filter name="final_partner" string="Final Partner" context="{'group_by':'final_partner_id'}"/>
+                            <separator/>
+                            <filter name="date_to_done" string="Date to Done" context="{'group_by':'date_to_done'}"/>
+                            <filter name="date_to_processed" string="Date to Processed" context="{'group_by':'date_to_processed'}"/>
+                        </group>
+                    </xpath>
+                </field>
+        </record>
+
+        <!-- record model="ir.ui.view" id="re_sale_blanket_order_form_view_technical">
+            <field name="name">form.re.sale.blanket.order</field>
+            <field name="model">sale.blanket.order</field>
+	    <field name="inherit_id" ref="re_sale_blanket_order_form_view" />
+	    <field name="groups" ref="re_sale_security.group_reno_technical_user"></field>
+            <field name="arch" type="xml">
+		<field name="state" position="before">
+			<button name="action_reject" type="object" string="Rechazar" states="draft,open,future_contract,future_process,done" />
+		</field>
+	    </field>
+	</record -->
+
+        <record model="ir.ui.view" id="re_sale_blanket_order_sale_order_form_view">
+            <field name="name">form.re.sale.blanket.order.sale.order</field>
+            <field name="model">sale.order</field>
+	    <field name="inherit_id" ref="re_franquicia.sale_order_franquicia" />
+            <field name="arch" type="xml">
+		<xpath expr="//page[@name='amob_reno']/group/field[@name='group_id']" position="after">
+			<field name="mrp_ambiente_id" readonly="1" />
+			<field name="claim" readonly="1" />
+			<field name="claim_process" readonly="1" />
+			<field name="claim_process_date" readonly="1" />
+			<field name="blanket_origin_id" readonly="1" />
+			<field name="ambiente_id" readonly="1" />
+			<field name="xml_contents" readonly="1" />
+		</xpath>
+		<xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="after">
+			<field name="task_id" />
+		</xpath>
+		<field name="partner_id" position="after">
+			<field name="final_partner_id" readonly="1" string="Cliente final"/>
+			<field name="lp_reno" readonly="1" options="{'no_open': True}"/>
+		</field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="re_sale_management_sale_order_form_view">
+            <field name="name">form.re.sale.order.management</field>
+            <field name="model">sale.order</field>
+	    <field name="inherit_id" ref="sale_management.sale_order_view_form" />
+            <field name="arch" type="xml">
+		<xpath expr="//button[@name='%(sale.action_view_sale_advance_payment_inv)d']" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath>
+		<xpath expr="//button[@name='%(sale.action_view_sale_advance_payment_inv)d']" position="after">
+			<button name="create_invoices" type="object" string="Crear factura" attrs="{'invisible': [('invoice_status', 'not in', ('to invoice', 'partial'))]}" />
+		</xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="re_sale_sale_order_form_view">
+            <field name="name">form.re.sale.order</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <field name="company_id" position="after">
+                    <field name="blanket_order_id" readonly="1" />
+                    <field name="transport_id" readonly="1" />
+                    <field name="non_charge" readonly="1" />
+                    <field name="charge_percent" readonly="1" />
+
+                </field>
+                <xpath expr="//group[@name='sale_pay']/field[@name='invoice_status']" position="after">
+                    <field name="applied_amount" groups="account.group_account_invoice"/>
+                    <field name="invoice_asigned_ids" nolabel="1" colspan="2" groups="account.group_account_invoice">
+                        <tree editable="0" create="0">
+                            <field name="order_id"/>
+                            <field name="invoice_id"/>
+                            <field name="apply_amount"/>
+                        </tree>
+                    </field>
+                </xpath>
+                <xpath expr="//field[@name='commitment_date']" position="after">
+                    <field name="porce_armado_pivot" invisible="1"/>
+                    <field name="porce_armado" force_save="1" readonly="1"/>
+                    <field name="remitida" force_save="1" readonly="1"/>
+                </xpath>
+                <xpath expr="//field[@name='expected_date']" position="before">
+                    <field name="date_available"/>
+                </xpath>
+                <xpath expr="//button[@name='payment_action_capture']" position="after">
+                    <button name="recalcular_totales_ov" type="object" string="Recalcular totales" class="btn-primary"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="re_delivery_sale_order_form_view">
+            <field name="name">form.re.delivery.sale.order</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="delivery.view_order_form_with_carrier"/>
+            <field name="arch" type="xml">
+                <xpath expr="//label[@for='carrier_id']" position="before">
+                    <field name="transport_id" readonly="1"/>
+                    <field name="delivery_address_id" attrs="{'readonly': [('state', 'not in', ('draft', 'open'))]}"/>
+                    <field name="final_delivery_address_id" attrs="{'readonly': [('state', 'not in', ('draft', 'open'))]}"/>
+                    <field name="carrier_tmp_id" invisible="1"/>
+                </xpath>
+				<field name="carrier_id" position="attributes">
+					<attribute name="domain">[]</attribute>
+				</field>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="re_sale_sale_order_tree_view">
+            <field name="name">tree.re.sale.order</field>
+            <field name="model">sale.order</field>
+	        <field name="inherit_id" ref="sale.view_order_tree" />
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="blanket_order_id" readonly="1" />
+                    <field name="final_partner_id" string="Cliente Final"/>
+                    <field name="porce_armado" />
+                    <field name="remitida" />
+                </field>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="re_sale_quotation_tree_view">
+            <field name="name">tree.re.quotation</field>
+            <field name="model">sale.order</field>
+	    <field name="inherit_id" ref="sale.view_quotation_tree" />
+            <field name="arch" type="xml">
+		<field name="name" position="after">
+			<field name="blanket_order_id" readonly="1" />
+			<field name="final_partner_id" string="Cliente Final"/>
+			<field name="origin" readonly="1" />
+			<field name="porce_armado_pivot" invisible="1"/>
+			<field name="porce_armado" force_save="1" readonly="1"/>
+			<field name="remitida" force_save="1" readonly="1"/>
+		</field>
+            </field>
+        </record>
+
+
+
+
+        <record id="sale_list_price_form" model="ir.ui.view">
+            <field name="name">sale.list.price.form</field>
+            <field name="model">sale.list.price</field>
+            <field name="arch" type="xml">
+                <form string="Listas de precio">
+                        <group>
+                                <field name="name" />
+                                <field name="percent" />
+                                <field name="previous_lp" />
+                                <field name="date_from" />
+                                <field name="date_to" />
+                                <field name="activa" />
+                                <field name="responsability_type" />
+                        </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="sale_list_price_tree" model="ir.ui.view">
+            <field name="name">sale.list.price.tree</field>
+            <field name="model">sale.list.price</field>
+            <field name="arch" type="xml">
+                <tree>
+                        <field name="name" />
+                        <field name="percent" />
+                        <field name="previous_lp" />
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="activa" />
+                </tree>
+            </field>
+        </record>
+
+
+    <record id="action_re_lista_precio" model="ir.actions.act_window">
+        <field name="name">Listas de Precio Reno</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.list.price</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_re_lista_precio"
+        name="Listas de Precio Reno"
+        parent="crm.crm_menu_config"
+        sequence="120"
+        action="action_re_lista_precio"/>
+        <!-- groups="base.group_system"/ -->
+
+
+    <record id="sale_log_condition_form" model="ir.ui.view">
+        <field name="name">sale.condition.form</field>
+        <field name="model">sale.condition</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="toggle_active" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="display_name" class="oe_edit_only"/>
+                        <h1><field name="display_name" class="oe_inline"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="advance_percent" />
+                            <field name="delivery_percent" />
+                            <field name="certification_percent" />
+                        </group>
+                        <group>
+                            <field name="percent_discount" />
+                            <field name="manual" />
+                            <field name="manual_name" attrs="{'readonly': [('manual', '=', False)]}"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sale_log_condition" model="ir.ui.view">
+        <field name="name">sale.condition.tree</field>
+        <field name="model">sale.condition</field>
+        <field name="arch" type="xml">
+            <tree>
+                    <field name="display_name" />
+                    <field name="advance_percent" />
+                    <field name="delivery_percent" />
+                    <field name="certification_percent" />
+                    <field name="percent_discount" />
+                    <field name="manual" />
+                    <field name="manual_name" />
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_re_sale_condition" model="ir.actions.act_window">
+        <field name="name">Condiciones de Venta</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.condition</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_re_sale_condition"
+        name="Condiciones de Venta"
+        parent="crm.crm_menu_config"
+        sequence="130"
+        action="action_re_sale_condition"/>
+        <!-- groups="base.group_system"/ -->
+
+
+        <record id="sale_log_tree" model="ir.ui.view">
+            <field name="name">sale.log.tree</field>
+            <field name="model">sale.log</field>
+            <field name="arch" type="xml">
+                <tree create="0" edit="0" delete="0">
+                        <field name="name" />
+                        <field name="partner_id" />
+                        <field name="date" />
+                        <field name="uid" />
+                        <field name="blanket_order_id" />
+                        <field name="lead_id" />
+                        <field name="order_id" />
+                        <field name="state_from" />
+                        <field name="state_to" />
+                        <field name="credit_from" />
+                        <field name="credit_to" />
+                        <field name="deviation_from" />
+                        <field name="deviation_to" />
+                </tree>
+            </field>
+        </record>
+
+
+    <record id="action_re_sale_log" model="ir.actions.act_window">
+        <field name="name">Log de ventas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.log</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_re_sale_log"
+        name="Log de Ventas"
+        parent="crm.crm_menu_config"
+        sequence="140"
+        action="action_re_sale_log"/>
+        <!-- groups="base.group_system"/ -->
+
+
+        <record id="sale_franchise_category_tree" model="ir.ui.view">
+            <field name="name">sale.franchise.category.tree</field>
+            <field name="model">sale.franchise.category</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                        <field name="name" />
+                        <field name="discount_percent" />
+                </tree>
+            </field>
+        </record>
+
+
+    <record id="action_sale_franchise_category" model="ir.actions.act_window">
+        <field name="name">Categoria de Franquicias</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.franchise.category</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="crm_menu_sale_franchise_category"
+        name="Categoria de Franquicias"
+        parent="crm.crm_menu_config"
+        sequence="150"
+        action="action_sale_franchise_category"/>
+        <!-- groups="base.group_system"/ -->
+
+    <record id="view_blanket_order_ctacte_pivot" model="ir.ui.view">
+        <field name="name">sale.blanket.order.ctacte.pivot</field>
+        <field name="model">sale.blanket.order</field>
+        <field name="arch" type="xml">
+            <pivot string="Cta Cte Acuerdos">
+                <field name="name" type="row"/>
+                <field name="user_id" type="row"/>
+                <field name="partner_id" type="row"/>
+                <field name="final_partner_id" type="row"/>
+                <field name="state" type="col"/>
+		<field name="stored_total_amount" string="Monto del acuerdo" type="measure"/>
+		<field name="stored_main_blanket_line_residual" string="Monto sin facturar" type="measure"/>
+		<field name="stored_amount_invoiced" string="Monto facturado" type="measure"/>
+		<field name="stored_amount_invoiced_residual" string="Saldo facturado" type="measure"/>
+		<field name="stored_payment_receipt_residual" string="Recibos aplicados" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+
+
+    <record id="view_blanket_order_ctacte_tree" model="ir.ui.view">
+        <field name="name">sale.blanket.order.ctacte.tree</field>
+        <field name="model">sale.blanket.order</field>
+        <field name="arch" type="xml">
+            <tree default_order="id desc">
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="partner_id"/>
+                <field name="final_partner_id"/>
+                <field name="state"/>
+                <field name="lp_reno"/>
+                <field name="franchise_percent"/>
+                <field name="percent"/>
+                <field name="additional_discount"/>
+                <field name="stored_total_amount" string="Monto del acuerdo"/>
+                <field name="stored_balance" string="Saldo del acuerdo"/>
+                <field name="stored_main_blanket_line_residual" string="Monto sin facturar"/>
+                <field name="stored_amount_invoiced" string="Monto facturado"/>
+                <field name="stored_amount_invoiced_residual" string="Saldo facturado"/>
+                <field name="stored_payment_receipt_residual" string="Recibos aplicados"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_blanket_order_ctacte_search" model="ir.ui.view">
+        <field name="name">sale.blanket.order.ctacte.search</field>
+        <field name="model">sale.blanket.order</field>
+        <field name="arch" type="xml">
+            <search>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="product_id"/>
+                    <field name="state"/>
+            </search>
+        </field>
+    </record>
+
+
+
+    <record id="act_open_blanket_order_cta_cte_view"
+            model="ir.actions.act_window">
+        <field name="name">Cta Cte Acuerdos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.blanket.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="view_id" ref="view_blanket_order_ctacte_tree"/>
+        <field name="search_view_id" ref="view_blanket_order_ctacte_search"/>
+    </record>
+
+    <menuitem id="menu_blanket_order_ctacte"
+        parent="sale.sale_order_menu"
+        groups="sales_team.group_sale_manager"
+        sequence="30"
+        action="act_open_blanket_order_cta_cte_view"/>
+
+
+    <record id="re_sale_blanket_order_manager" model="ir.ui.view">
+        <field name="name">re.sale.blanket.order.manager</field>
+        <field name="model">sale.blanket.order</field>
+        <field name="groups_id" eval="[(4, ref('sales_team.group_sale_manager'))]"/>
+	<field name="inherit_id" ref="re_sale_blanket_order_form_view"></field>
+        <field name="arch" type="xml">
+		<field name="percent" position="attributes">
+			<attribute name="readonly">0</attribute>
+		</field>
+        </field>
+    </record>
+
+
+
+
+</odoo>
+

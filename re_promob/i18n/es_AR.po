@@ -1,0 +1,2961 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* re_promob
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-20 16:42+0000\n"
+"PO-Revision-Date: 2021-07-20 16:42+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__advance_condition
+msgid "% Adelanto"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__built_percent
+msgid "% Armado"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__condition_percent
+msgid "% Desc. Condicion de Venta"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__delivered_condition
+msgid "% Entrega"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "<i class=\"fa fa-arrow-right\"/> Agregar a Acuerdo"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "<i class=\"fa fa-arrow-right\"/> Calcular Envio"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "<i class=\"fa fa-check text-success\" role=\"img\" aria-label=\"Rating OK\" title=\"Rating OK\" attrs=\"{'invisible':['|','|',('carrier_id','=',False),('state','not in',('draft')),('delivery_rating_success','=',False)]}\"/>"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.order,state:0
+msgid "A Confirmar"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__responsability_type
+msgid "AFIP Responsability Type"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__altura
+msgid "ALTURA"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_account_debt_line
+msgid "Account Debt Line"
+msgstr "Línea de Deuda"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__move_id
+msgid "Account Move"
+msgstr "Movimiento de cuenta"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__activa
+msgid "Activa"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_debt_line__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_account_move__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_account_move_line__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_percepcion__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__blanket_order_id
+#: model_terms:ir.ui.view,arch_db:re_promob.search_re_promob_sale_order
+msgid "Acuerdo"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Acuerdo Definitivo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__acuerdo_futuro
+msgid "Acuerdo Futuro"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.blanket.order,state:0
+msgid "Acuerdo a Futuro"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Acuerdo con Cliente Final"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Acuerdo con Reno"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.act_res_partner_2_sale_blanket_order
+#: model:ir.model.fields,field_description:re_promob.field_account_analytic_line__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_res_partner__blanket_ids
+#: model:ir.model.fields,field_description:re_promob.field_res_users__blanket_ids
+#: model_terms:ir.ui.view,arch_db:re_promob.re_promob_account_payment_group_form
+#: model_terms:ir.ui.view,arch_db:re_promob.res_partner_view_buttons_blanket
+msgid "Acuerdos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__advance_percent
+msgid "Adelanto"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__advance
+msgid "Advance"
+msgstr "anticipado"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__against_certification
+msgid "Against Certification"
+msgstr "Contra Certificación"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Agregar archivo"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.promob_depto_wizard_view
+#: model_terms:ir.ui.view,arch_db:re_promob.promob_file_wizard_view
+msgid "Agregar archivo Promob"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Agregar departamentos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__muebles_especiales
+msgid "Agregar muebles especiales"
+msgstr ""
+
+#. module: re_promob
+#: selection:promob.depto.wizard,numeracion:0
+msgid "Alfabetico"
+msgstr "Alfabético"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_percepcion__percent
+msgid "Alícuota"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_mrp_bom__ambiente_id
+#: model:ir.model.fields,field_description:re_promob.field_product_product__ambiente_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_pedido__ambiente_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__ambiente_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__mrp_ambiente_id
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_ambiente_form_view
+msgid "Ambiente"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__ambiente_ids
+msgid "Ambientes"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Amoblamientos Reno"
+msgstr "Amoblamientos Renoblamientos"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_move__blanket_amount
+#: model:ir.model.fields,field_description:re_promob.field_account_payment_group__save_payments_amount
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__amount_total
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_list
+msgid "Amount"
+msgstr "Importe"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_payment_group__analytic_ids
+msgid "Analytic"
+msgstr "Analítica"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_account_analytic_account
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__analytic_account_id
+msgid "Analytic Account"
+msgstr "Cuenta Analítica"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Línea Analítica"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.search_re_promob_account_move_line
+msgid "Analytic Tags"
+msgstr "Etiquetas analíticas"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.wzd_aplicar_documento_form_view
+msgid "Aplicar"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.form_re_promob_account_invoice
+#: model_terms:ir.ui.view,arch_db:re_promob.re_promob_account_payment_group_form
+msgid "Aplicar a acuerdo"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_promob_account_payment_group_form
+msgid "Aplicar a documento"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.inv_blanket_wizard_view
+msgid "Aplicar facturas a acuerdos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__applied_amount
+msgid "Applied amount"
+msgstr "Cantidad aplicada"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_assigned_invoice__apply_amount
+msgid "Apply amount"
+msgstr "Aplicar cantidad"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_wzd_exportacion_bom__archivo
+msgid "Archivo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__promob_id
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_line_form_view
+msgid "Archivo Promob"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__promob_def_id
+msgid "Archivo Promob Futuro"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__promob_file_txt
+msgid "Archivo TXT de Promob"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__promob_file_def_ids
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__promob_file_ids
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Archivos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__archivos_maquina
+msgid "Archivos Maquina"
+msgstr "Archivos Máquina"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__promob_ids
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__promob_ids
+msgid "Archivos Promob"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.wzd_aplicar_documento_form_view
+msgid "Asignar pago a documento"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.promob_account_payment_wizard_view
+msgid "Asignar pagos a acuerdo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__invoice_asigned_ids
+msgid "Assigned Invoices"
+msgstr "Facturas asignadas"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_invoice__invoice_asigned_ids
+msgid "Assigned Orders"
+msgstr "Órdenes asignadas"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.form_re_promob_account_invoice
+msgid "Assigned orders"
+msgstr "Órdenes asignadas"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__available_carrier_ids
+msgid "Available Carriers"
+msgstr "Transportistas disponibles"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__use_other_origin
+msgid "BO Inexistente"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__blanket_origin_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__blanket_origin_id
+msgid "BO of the original order"
+msgstr "BO del pedido original"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Lista de materiales"
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.blanket_order_information_report_action
+#: model:ir.ui.menu,name:re_promob.blanket_order_information_report
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_information_report_search
+msgid "Blanket Information Report"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_blanket_order
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__blanket_order_id
+msgid "Blanket Order"
+msgstr "Acuerdo"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_blanket_order_information_report
+msgid "Blanket Order Information Report"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_blanket_order_line
+msgid "Blanket Order Line"
+msgstr "Línea de acuerdo"
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.blanket_order_report_action
+#: model:ir.model,name:re_promob.model_blanket_order_report
+#: model:ir.ui.menu,name:re_promob.blanket_order_report
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+msgid "Blanket Order Report"
+msgstr "Reporte de acuerdos"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Blanket order"
+msgstr "Acuerdo"
+
+#. module: re_promob
+#: selection:sale.blanket.order,state:0
+msgid "Borrador"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Calidad"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__caminhoitemcatalog
+msgid "CaminhoItemCatalog"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.blanket.order,state:0
+msgid "Cancelado"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+#: model_terms:ir.ui.view,arch_db:re_promob.wzd_exportacion_bom
+msgid "Cancelar"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.order,state:0
+msgid "Cancelled"
+msgstr "Cancelada"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__qty
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__qty
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_line_form_view
+msgid "Cantidad"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__stock_move_line_qty_done
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_information_report_list
+msgid "Cantidad armada"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order_line__mrp_qty_done
+msgid "Cantidad fabricada"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__order_line_product_uom_qty
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_information_report_list
+msgid "Cantidad pedida"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_franchise_category__name
+msgid "Categoria"
+msgstr "Categoría"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_res_partner__franchise_category_id
+#: model:ir.model.fields,field_description:re_promob.field_res_users__franchise_category_id
+msgid "Categoria Franquicia"
+msgstr "Categoría Franquicia"
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_sale_franchise_category
+#: model:ir.ui.menu,name:re_promob.crm_menu_sale_franchise_category
+msgid "Categoria de Franquicias"
+msgstr "Categoría de Franquicias"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__categ_id
+msgid "Categoría de Producto"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.view_account_payment_group_search_categ
+msgid "Categoría de Proveedor"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__cause_id
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Cause"
+msgstr "Causa"
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_cause_object
+#: model:ir.ui.menu,name:re_promob.menu_cause_object
+#: model_terms:ir.ui.view,arch_db:re_promob.cause_object_tree
+msgid "Causes"
+msgstr "Causas"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__certification_percent
+msgid "Certificacion"
+msgstr "Certificación"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__city
+msgid "City"
+msgstr "Ciudad"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Claim"
+msgstr "Reclamo"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__claim_process
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__claim_process
+msgid "Claim Process"
+msgstr "Reclamo procesado"
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_claim_lines
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__claim_line_ids
+#: model:ir.ui.menu,name:re_promob.menu_claim_line
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_form
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_tree
+msgid "Claim lines"
+msgstr "Líneas de reclamo"
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_claim_object
+#: model:ir.ui.menu,name:re_promob.menu_claim_object
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_object_tree
+msgid "Claim options"
+msgstr "Opciones de reclamo"
+
+#. module: re_promob
+#: model:ir.ui.menu,name:re_promob.menu_sale_claim_config
+msgid "Claims"
+msgstr "Reclamos"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard__partner_id
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__partner_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__partner_id
+msgid "Cliente"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_analytic_line__final_partner_id
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_quotation_tree_view
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_sale_order_tree_view
+msgid "Cliente Final"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_debt_line__final_partner_id
+#: model:ir.model.fields,field_description:re_promob.field_account_move_line__final_partner_id
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__final_partner_id
+#: model_terms:ir.ui.view,arch_db:re_promob.form_re_promob_account_invoice
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_sale_order_form_view
+msgid "Cliente final"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.list.price,responsability_type:0
+msgid "Clientes del Exterior"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__codigotipomueble
+msgid "Cod Tipo Mueble"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_res_partner__cod_bejerman
+#: model:ir.model.fields,field_description:re_promob.field_res_users__cod_bejerman
+msgid "Codigo Bejerman"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_uom_uom__promob_code
+msgid "Codigo Promob"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__nombrecolor
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__color_id
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Color"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_color_object
+#: model:ir.ui.menu,name:re_promob.menu_color_object
+#: model_terms:ir.ui.view,arch_db:re_promob.color_object_tree
+msgid "Colors"
+msgstr "Colores"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.promob_file_wizard_view
+msgid "Comparar"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,help:re_promob.field_sale_blanket_order__carrier_id
+msgid "Complete si desea faccturar las entregas."
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Compute sale order"
+msgstr "Calcular orden de venta"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Cond. Payment"
+msgstr "Condición de Pago"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__condition_id
+msgid "Condicion de Pago"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__additional_discount
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__name
+msgid "Condicion de Venta"
+msgstr "Condición de Venta"
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_re_sale_condition
+#: model:ir.ui.menu,name:re_promob.menu_re_sale_condition
+msgid "Condiciones de Venta"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.explain_amounts_wizard_view
+#: model_terms:ir.ui.view,arch_db:re_promob.inv_blanket_wizard_view
+#: model_terms:ir.ui.view,arch_db:re_promob.promob_account_payment_wizard_view
+#: model_terms:ir.ui.view,arch_db:re_promob.promob_depto_wizard_view
+#: model_terms:ir.ui.view,arch_db:re_promob.promob_file_wizard_view
+msgid "Confirmar"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__promob_file
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_line__promob_file
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__promob_file
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__promob_file
+msgid "Contenidos Archivo de Promob"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__xml_contents
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_line__xml_contents
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__xml_contents
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_ambiente_form_view
+msgid "Contenidos de XML"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_analytic_account__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_account_invoice__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_project_project__blanket_order_id
+msgid "Contrato"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_promob_mrp_bom_filter
+msgid "Controlada"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Controlar Montos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__delivery_price
+msgid "Costo de Envio Estimado"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__count_claims
+msgid "Count Items"
+msgstr "Items Reclamados"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Crear Estructuras"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Crear SO"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_management_sale_order_form_view
+msgid "Crear factura"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Crear ordenes"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.form_re_project_sale_blanket_order
+msgid "Crear tareas"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_assigned_invoice__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_cause_object__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_claim_object__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_color_object__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_drawer_object__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_explain_amount_wizard__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_material_object__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_model_object__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_problem_object__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_digest__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_pedido__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_percepcion__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_franchise_category__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_supply_object__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_type_object__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_wzd_aplicar_documento__create_uid
+#: model:ir.model.fields,field_description:re_promob.field_wzd_exportacion_bom__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_assigned_invoice__create_date
+#: model:ir.model.fields,field_description:re_promob.field_cause_object__create_date
+#: model:ir.model.fields,field_description:re_promob.field_claim_object__create_date
+#: model:ir.model.fields,field_description:re_promob.field_color_object__create_date
+#: model:ir.model.fields,field_description:re_promob.field_drawer_object__create_date
+#: model:ir.model.fields,field_description:re_promob.field_explain_amount_wizard__create_date
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard__create_date
+#: model:ir.model.fields,field_description:re_promob.field_material_object__create_date
+#: model:ir.model.fields,field_description:re_promob.field_model_object__create_date
+#: model:ir.model.fields,field_description:re_promob.field_problem_object__create_date
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__create_date
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__create_date
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard__create_date
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_digest__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_pedido__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_percepcion__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_franchise_category__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__create_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__create_date
+#: model:ir.model.fields,field_description:re_promob.field_supply_object__create_date
+#: model:ir.model.fields,field_description:re_promob.field_type_object__create_date
+#: model:ir.model.fields,field_description:re_promob.field_wzd_aplicar_documento__create_date
+#: model:ir.model.fields,field_description:re_promob.field_wzd_exportacion_bom__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.act_open_blanket_order_cta_cte_view
+#: model:ir.ui.menu,name:re_promob.menu_blanket_order_ctacte
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_pivot
+msgid "Cta Cte Acuerdos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__analytic_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__analytic_account_id
+msgid "Cuenta Analitica"
+msgstr "Cuenta Analítica"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Cuenta Corriente"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_account_move_tree
+msgid "Cuenta Corriente Acuerdo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__descricao
+msgid "DESCRICAO"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__desenho
+msgid "DESENHO"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__date_to_done
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_inherit_search_view
+msgid "Date to Done"
+msgstr "Fecha de terminado"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__date_to_processed
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_inherit_search_view
+msgid "Date to Processed"
+msgstr "Fecha de procesamiento"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Datos Extras"
+msgstr ""
+
+#. module: re_promob
+#: code:addons/re_promob/models.py:3282
+#, python-format
+msgid "Debe añadir al menos un producto"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__carrier_tmp_id
+msgid "Delivery Method"
+msgstr "Método entrega"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__delivery_rating_success
+msgid "Delivery Rating Success"
+msgstr "Tasa de éxito en entregas"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__depto_def_ids
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__depto_ids
+msgid "Departamentos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__depto_id
+msgid "Depto"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__depto_def_id
+msgid "Depto Futuro"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__depto_id
+msgid "Depto orig."
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard__depto_piso
+msgid "Depto por piso"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Deptos"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.form_re_promob_account_move_line
+#: model_terms:ir.ui.view,arch_db:re_promob.re_promob_account_payment_group_form
+msgid "Desaplicar"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_cause_object__description
+#: model:ir.model.fields,field_description:re_promob.field_claim_object__description
+#: model:ir.model.fields,field_description:re_promob.field_color_object__description
+#: model:ir.model.fields,field_description:re_promob.field_drawer_object__description
+#: model:ir.model.fields,field_description:re_promob.field_material_object__description
+#: model:ir.model.fields,field_description:re_promob.field_model_object__description
+#: model:ir.model.fields,field_description:re_promob.field_problem_object__description
+#: model:ir.model.fields,field_description:re_promob.field_supply_object__description
+#: model:ir.model.fields,field_description:re_promob.field_type_object__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__descuento
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_line__discount
+msgid "Descuento"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__franchise_percent
+msgid "Descuento Categoria Franquicia"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__percent
+msgid "Descuento Extra"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__desenho
+msgid "Desenho"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__deviation_from
+msgid "Desvio Anterior"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__deviation_to
+msgid "Desvio Posterior"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__difference
+msgid "Diferencia"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Dir.Entrega Cliente Final"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__final_delivery_address_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__final_delivery_address_id
+msgid "Direccion Destino Final"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__delivery_address_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__delivery_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__delivery_partner_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__delivery_address_id
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Direccion Envio"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_assigned_invoice__display_name
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__display_name
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__display_name
+#: model:ir.model.fields,field_description:re_promob.field_cause_object__display_name
+#: model:ir.model.fields,field_description:re_promob.field_claim_object__display_name
+#: model:ir.model.fields,field_description:re_promob.field_color_object__display_name
+#: model:ir.model.fields,field_description:re_promob.field_drawer_object__display_name
+#: model:ir.model.fields,field_description:re_promob.field_explain_amount_wizard__display_name
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard__display_name
+#: model:ir.model.fields,field_description:re_promob.field_material_object__display_name
+#: model:ir.model.fields,field_description:re_promob.field_model_object__display_name
+#: model:ir.model.fields,field_description:re_promob.field_problem_object__display_name
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__display_name
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__display_name
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard__display_name
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_digest__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_pedido__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_percepcion__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_franchise_category__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__display_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__display_name
+#: model:ir.model.fields,field_description:re_promob.field_supply_object__display_name
+#: model:ir.model.fields,field_description:re_promob.field_type_object__display_name
+#: model:ir.model.fields,field_description:re_promob.field_wzd_aplicar_documento__display_name
+#: model:ir.model.fields,field_description:re_promob.field_wzd_exportacion_bom__display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__nombredistribucion
+msgid "Distribucion"
+msgstr "Distribución"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_wzd_aplicar_documento__invoice_id
+msgid "Documento"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Drawer"
+msgstr "Cajón"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__codigo_ncm
+msgid "Dummy, mejor no pregunten"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__delivery_percent
+msgid "Entrega"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.blanket.order,state:0
+msgid "Enviado a Fabrica"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Enviar a Fabrica"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__team_id
+msgid "Equipo"
+msgstr ""
+
+#. module: re_promob
+#: code:addons/re_promob/models.py:3243
+#, python-format
+msgid "Error al procesar el archivo:\n"
+" %s \n"
+"(%s)"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_inherit_search_view
+#: model_terms:ir.ui.view,arch_db:re_promob.search_re_promob_sale_order
+msgid "Es Reclamo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__is_transport
+msgid "Es flete"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_res_partner__is_transport
+#: model:ir.model.fields,field_description:re_promob.field_res_users__is_transport
+msgid "Es transporte?"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__state_from
+msgid "Estado Anterior"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__state_to
+msgid "Estado Posterior"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__bom_id
+msgid "Estructura"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_move_line__tag_acuerdo_inicial
+msgid "Etiqueta A. Inicial"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__exchange
+msgid "Exchange"
+msgstr "Canje"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__advance_amount
+msgid "Exigible Anticipo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__delivered_amount
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Exigible Contraentrega"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_explain_amount_wizard__explain_text
+msgid "Explicacion"
+msgstr "Explicación"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.explain_amounts_wizard_view
+msgid "Explicacion de montos"
+msgstr "Explicación de montos"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Explicar Montos"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.wzd_exportacion_bom
+msgid "Exportar"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.wzd_exportacion_bom
+msgid "Exportar Boms"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_exportar_bom
+msgid "Exportar boms de productos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_analytic_line__invoice_id
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard__invoice_id
+msgid "Factura"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__invoice_ids
+msgid "Factura Contrato"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Facturas"
+msgstr ""
+
+#. module: re_promob
+#: code:addons/re_promob/models.py:1989
+#, python-format
+msgid "Falta diario de facturación para %s"
+msgstr ""
+
+#. module: re_promob
+#: code:addons/re_promob/models.py:1994
+#, python-format
+msgid "Falta documentos de tipo %s para el diario %s"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__nombrefamilia
+msgid "Familia"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__date
+msgid "Fecha"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.view_product_nomenclador_tree
+msgid "Fecha Creación"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__date_send_factory
+msgid "Fecha Enviado a fabrica"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__date_order
+msgid "Fecha OV"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__date_order_def
+msgid "Fecha Pedido definitivo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__commitment_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__commitment_date
+msgid "Fecha compromiso"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__confirmation_date
+msgid "Fecha confirmacion ov"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,help:re_promob.field_sale_blanket_order__date_send_factory
+msgid "Fecha de Enviado a fabrica (Acuerdos Normales)"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__validity_date
+msgid "Fecha de Medición"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Fecha de compromiso"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,help:re_promob.field_sale_blanket_order__date_order_def
+msgid "Fecha de pedido definitivo (Acuerdos a Futuro)"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__date_from
+msgid "Fecha desde"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__date_to
+msgid "Fecha hasta"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__fecha_lanzamiento
+msgid "Fecha lanzamiento"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__date_to_done
+msgid "Fecha pedido fabrica"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__fecha_planificacion
+msgid "Fecha planificacion"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__picking_date_done
+msgid "Fecha remito"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__production_date_finished
+msgid "Fecha ultimo armado"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_digest__digest
+msgid "File Digest"
+msgstr "Resumen de archivos"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_invoice__final_partner_id
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__final_partner_id
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_inherit_search_view
+msgid "Final Partner"
+msgstr "Cliente final"
+
+#. module: re_promob
+#: selection:blanket.order.report,invoice_to:0
+#: selection:inv.blanket.wizard,invoice_to:0
+#: selection:promob.account.payment.wizard,invoice_to:0
+msgid "Final client"
+msgstr "Cliente final"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+#: model_terms:ir.ui.view,arch_db:re_promob.search_re_promob_account_move_line
+msgid "Final client Invoice"
+msgstr "Factura cliente final"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__final_partner_id
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Final partner"
+msgstr "Cliente final"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_res_partner__transport_product
+#: model:ir.model.fields,field_description:re_promob.field_res_users__transport_product
+msgid "Flete"
+msgstr ""
+
+#. module: re_promob
+#: selection:blanket.order.report,invoice_to:0
+#: selection:inv.blanket.wizard,invoice_to:0
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__franchise_id
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+#: selection:promob.account.payment.wizard,invoice_to:0
+msgid "Franchise"
+msgstr "Franquicia"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+#: model_terms:ir.ui.view,arch_db:re_promob.search_re_promob_account_move_line
+msgid "Franchise Invoice"
+msgstr "Factura de franquicia"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_move_line__franchise_id
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__franchise_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__franchise_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__partner_id
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Franquicia"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_line__franchise_percent
+msgid "Franquicia Descuento"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.order,invoice_status:0
+msgid "Fully Invoiced"
+msgstr "Facturado"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.form_re_promob_account_invoice
+msgid "Generar Asientos de Reversión"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_ambiente_form_view
+msgid "Generar estructura"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_information_report_search
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_inherit_search_view
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Grupo de Ventas"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_assigned_invoice__id
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__id
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__id
+#: model:ir.model.fields,field_description:re_promob.field_cause_object__id
+#: model:ir.model.fields,field_description:re_promob.field_claim_object__id
+#: model:ir.model.fields,field_description:re_promob.field_color_object__id
+#: model:ir.model.fields,field_description:re_promob.field_drawer_object__id
+#: model:ir.model.fields,field_description:re_promob.field_explain_amount_wizard__id
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard__id
+#: model:ir.model.fields,field_description:re_promob.field_material_object__id
+#: model:ir.model.fields,field_description:re_promob.field_model_object__id
+#: model:ir.model.fields,field_description:re_promob.field_problem_object__id
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__id
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__id
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard__id
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_digest__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_pedido__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_percepcion__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_franchise_category__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__id
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__id
+#: model:ir.model.fields,field_description:re_promob.field_supply_object__id
+#: model:ir.model.fields,field_description:re_promob.field_type_object__id
+#: model:ir.model.fields,field_description:re_promob.field_wzd_aplicar_documento__id
+#: model:ir.model.fields,field_description:re_promob.field_wzd_exportacion_bom__id
+msgid "ID"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__promob_id
+msgid "ID (PROMOB)"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__original_id
+msgid "ID Original"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__item_base
+msgid "ITEM_BASE"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_percepcion__tax_id
+msgid "Impuesto"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__move_ids
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__move_line_ids
+msgid "Imputaciones contables"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_account_invoice
+#: model:ir.model.fields,field_description:re_promob.field_assigned_invoice__invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__invoice_status
+msgid "Invoice Status"
+msgstr "Estado factura"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_move_line__invoice_to
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__invoice_to
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard__invoice_to
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__invoice_to
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+#: model_terms:ir.ui.view,arch_db:re_promob.search_re_promob_account_move_line
+msgid "Invoice to"
+msgstr "Factura a"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order_line__qty_invoiced
+msgid "Invoiced Quantity"
+msgstr "Cantidad Facturada"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__claim
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__claim
+msgid "Is Claim"
+msgstr "Es reclamo"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__item_base
+msgid "Item Base"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Items"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__items_pedidos_ids
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Items Pedidos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_account_move
+msgid "Journal Entries"
+msgstr "Asientos contables"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__largura
+msgid "LARGURA"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__lp_final_customer
+msgid "LP Acuerdo con Cliente"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__lp_reno
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__lp_reno
+msgid "LP Acuerdo con Reno"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_assigned_invoice____last_update
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report____last_update
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report____last_update
+#: model:ir.model.fields,field_description:re_promob.field_cause_object____last_update
+#: model:ir.model.fields,field_description:re_promob.field_claim_object____last_update
+#: model:ir.model.fields,field_description:re_promob.field_color_object____last_update
+#: model:ir.model.fields,field_description:re_promob.field_drawer_object____last_update
+#: model:ir.model.fields,field_description:re_promob.field_explain_amount_wizard____last_update
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard____last_update
+#: model:ir.model.fields,field_description:re_promob.field_material_object____last_update
+#: model:ir.model.fields,field_description:re_promob.field_model_object____last_update
+#: model:ir.model.fields,field_description:re_promob.field_problem_object____last_update
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador____last_update
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard____last_update
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard____last_update
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_digest____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_pedido____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_percepcion____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_franchise_category____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price____last_update
+#: model:ir.model.fields,field_description:re_promob.field_sale_log____last_update
+#: model:ir.model.fields,field_description:re_promob.field_supply_object____last_update
+#: model:ir.model.fields,field_description:re_promob.field_type_object____last_update
+#: model:ir.model.fields,field_description:re_promob.field_wzd_aplicar_documento____last_update
+#: model:ir.model.fields,field_description:re_promob.field_wzd_exportacion_bom____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_assigned_invoice__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_cause_object__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_claim_object__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_color_object__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_drawer_object__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_explain_amount_wizard__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_material_object__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_model_object__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_problem_object__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_digest__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_pedido__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_percepcion__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_franchise_category__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_supply_object__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_type_object__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_wzd_aplicar_documento__write_uid
+#: model:ir.model.fields,field_description:re_promob.field_wzd_exportacion_bom__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_assigned_invoice__write_date
+#: model:ir.model.fields,field_description:re_promob.field_cause_object__write_date
+#: model:ir.model.fields,field_description:re_promob.field_claim_object__write_date
+#: model:ir.model.fields,field_description:re_promob.field_color_object__write_date
+#: model:ir.model.fields,field_description:re_promob.field_drawer_object__write_date
+#: model:ir.model.fields,field_description:re_promob.field_explain_amount_wizard__write_date
+#: model:ir.model.fields,field_description:re_promob.field_inv_blanket_wizard__write_date
+#: model:ir.model.fields,field_description:re_promob.field_material_object__write_date
+#: model:ir.model.fields,field_description:re_promob.field_model_object__write_date
+#: model:ir.model.fields,field_description:re_promob.field_problem_object__write_date
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__write_date
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__write_date
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard__write_date
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_digest__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_pedido__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_percepcion__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_franchise_category__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__write_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__write_date
+#: model:ir.model.fields,field_description:re_promob.field_supply_object__write_date
+#: model:ir.model.fields,field_description:re_promob.field_type_object__write_date
+#: model:ir.model.fields,field_description:re_promob.field_wzd_aplicar_documento__write_date
+#: model:ir.model.fields,field_description:re_promob.field_wzd_exportacion_bom__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__credit_from
+msgid "Limite Credito Anterior"
+msgstr "Limite Crédito Anterior"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__credit_to
+msgid "Limite Credito Posterior"
+msgstr "Limite Crédito Posterior"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__blanket_order_line_id
+msgid "Linea Pedido"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.search_re_promob_account_move_line
+msgid "Linea Principal Acuerdo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_project_task__order_line
+msgid "Linea de orden de venta"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_line_form_view
+msgid "Linea de pedido"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__blanket_order_line_id
+msgid "Linea del pedido"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__move_lines_filtradas
+msgid "Lineas de Movimientos"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Lineas de Movimientos Cuenta Corriente"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__link_folder_16
+msgid "Link Carpeta 16"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__adj_crm
+msgid "Link Legajo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,help:re_promob.field_sale_blanket_order__link_folder_16
+msgid "Link carpeta 16, adjuntar pedido"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_promob_mrp_bom_filter
+msgid "Lista Controlada"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__previous_lp
+msgid "Lista Previa"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_mrp_bom__lista_controlada
+msgid "Lista controlada"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__name
+msgid "Lista de precios"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_payment_group__list_price
+msgid "Lista de precios vigente"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_re_lista_precio
+#: model:ir.ui.menu,name:re_promob.menu_re_lista_precio
+msgid "Listas de Precio Reno"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.sale_list_price_form
+msgid "Listas de precio"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.order,state:0
+msgid "Locked"
+msgstr "Bloqueado"
+
+#. module: re_promob
+#: model:ir.ui.menu,name:re_promob.menu_re_sale_log
+msgid "Log de Ventas"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_re_sale_log
+msgid "Log de ventas"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_crm_lead__log_ids
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_crm_case_form_view_oppor_log
+msgid "Logs"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__lt_despacho
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_information_report_list
+msgid "Lt despacho"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__lt_fabricacion
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_information_report_list
+msgid "Lt fabricacion"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__lt_planificacion
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_information_report_list
+msgid "Lt planificacion teorico"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__lt_tecnica
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_information_report_list
+msgid "Lt tecnica"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__lt_total_pedido
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_information_report_list
+msgid "Lt total pedido"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__order_line_id
+msgid "Línea de Pedido de Ventas"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order_line__mrp_id
+msgid "MRP production"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_move_line__main_blanket_line
+msgid "Main Blanket Line"
+msgstr "Línea principal del Acuerdo"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__manufacture_percent
+#: model:ir.model.fields,field_description:re_promob.field_sale_order_line__manufacture_percent
+msgid "Manufacture percent"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Marcar Procesado"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_mrp_bom_promob_form_view
+msgid "Marcar como controlada"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,help:re_promob.field_sale_condition__manual
+msgid "Marque para ingresar un nombre manual concatenado con el descuento"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__nombrematerial
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__material_id
+#: model:ir.ui.menu,name:re_promob.menu_material_object
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Material"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_material_object
+#: model_terms:ir.ui.view,arch_db:re_promob.material_object_tree
+msgid "Materials"
+msgstr "Materiales"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__carrier_id
+msgid "Metodo de Entrega"
+msgstr "Método de Entrega"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__model_id
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Model"
+msgstr "Modelo"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__nombremodelo
+msgid "Modelo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_model_object
+#: model:ir.ui.menu,name:re_promob.menu_model_object
+#: model_terms:ir.ui.view,arch_db:re_promob.model_object_tree
+msgid "Models"
+msgstr "Modelos"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__nombremodoconstructivo
+msgid "Modo Constructivo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__amount
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__amount
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Monto"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__residual_amount
+msgid "Monto Adeudado"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__amount_to_apply
+msgid "Monto a aplicar"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_payment_group__amount_applied
+msgid "Monto aplicado a acuerdos"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Monto de venta:total"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__stored_total_amount
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_pivot
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_tree
+msgid "Monto del acuerdo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__amount_deptos
+msgid "Monto deptos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__amount_final_deptos
+msgid "Monto deptos final"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_payment_group__amount_available_to_apply
+msgid "Monto disponible para acuerdos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__amount_invoiced
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__stored_amount_invoiced
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_pivot
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_tree
+msgid "Monto facturado"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_pivot
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_tree
+msgid "Monto sin facturar"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_analytic_line__final_move_id
+msgid "Mov aplicado a acuerdo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__date
+msgid "Move Date"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__analytic_ids
+msgid "Movimientos Cta Cte"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Movimientos Cuenta Corriente"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__muebles_readonly
+msgid "Muebles Readonly"
+msgstr ""
+
+#. module: re_promob
+#: selection:account.analytic.line,tipo_pedido:0
+#: selection:sale.blanket.order,tipo_pedido:0
+msgid "Multifamiliar (u obra)"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__other_origin
+msgid "NV/SO Sist. anterior"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__name
+#: model:ir.model.fields,field_description:re_promob.field_cause_object__name
+#: model:ir.model.fields,field_description:re_promob.field_claim_object__name
+#: model:ir.model.fields,field_description:re_promob.field_color_object__name
+#: model:ir.model.fields,field_description:re_promob.field_drawer_object__name
+#: model:ir.model.fields,field_description:re_promob.field_material_object__name
+#: model:ir.model.fields,field_description:re_promob.field_model_object__name
+#: model:ir.model.fields,field_description:re_promob.field_problem_object__name
+#: model:ir.model.fields,field_description:re_promob.field_supply_object__name
+#: model:ir.model.fields,field_description:re_promob.field_type_object__name
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+msgid "Name"
+msgstr "Nombre"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_promob_mrp_bom_filter
+msgid "No Controlada"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__skip_check
+msgid "No controlar"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__no_ambiente
+msgid "No generar ambientes"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__name
+msgid "Nombre"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__promob_name
+msgid "Nombre Ambiente Promob"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__promob_file_txt_name
+msgid "Nombre Archivo TXT de Promob"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__new_file_name
+#: model:ir.model.fields,field_description:re_promob.field_promob_file_wizard__promob_file_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_line__promob_file_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_line__promob_url
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__promob_file_name
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__promob_file_name
+msgid "Nombre Archivo de Promob"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__ref
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__name
+msgid "Nombre Depto"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__nombrelinea
+msgid "Nombre Linea"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__nombremodosubstitucion
+msgid "Nombre Modo Substitucion"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__nombretipoentidad
+msgid "Nombre Tipo Entidad"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.promob_file_wizard_view
+msgid "Nombre archivo en OwnCloud"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__manual_name
+msgid "Nombre manual"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.aciton_re_nomenclador
+#: model:ir.ui.menu,name:re_promob.menu_nomenclador
+msgid "Nomenclador"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__non_charge
+msgid "Non charge"
+msgstr "Sin cargo"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__note
+msgid "Notes"
+msgstr "Observaciones"
+
+#. module: re_promob
+#: selection:sale.order,invoice_status:0
+msgid "Nothing to Invoice"
+msgstr "Nada que Facturar"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard__numeracion
+msgid "Numeracion"
+msgstr "Numeración "
+
+#. module: re_promob
+#: selection:promob.depto.wizard,numeracion:0
+msgid "Numerico"
+msgstr "Numérico"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_information_report_search
+msgid "OP"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__op
+msgid "Op"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__operating_id
+msgid "Operating"
+msgstr "Unidad del Depto"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__lead_id
+msgid "Oportunidad"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard__blanket_order_id
+msgid "Orden"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__sale_order
+msgid "Orden de venta"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_mrp_production__sale_order_line
+msgid "Order Line"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__profundo
+msgid "PROFUNDO"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_account_payment_wizard__account_payment_group_id
+msgid "Pago"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.order,invoice_status:0
+msgid "Partial"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__partner_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__final_delivery_partner_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__final_partner_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__partner_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__final_partner_id
+#: model:ir.model.fields,field_description:re_promob.field_wzd_aplicar_documento__partner_id
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_inherit_search_view
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_payment_group__customer_vendor_categ_id
+msgid "Partner Category"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Pasar a Proceso Futuro"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__amount_payment
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_list
+msgid "Payment"
+msgstr "Pagos"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_account_payment_group
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__payment_group_id
+msgid "Payment Group"
+msgstr "Grupo de Pago"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_search
+msgid "Payment group"
+msgstr "Grupo de pago"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.view_account_payment_group_pivote
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_digest__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_pedido__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_pedido__order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__blanket_order_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__order_id
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_line_form_view
+#: selection:sale.order,state:0
+msgid "Pedido"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Pedido Definitivo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_analytic_line__sale_order_id
+msgid "Pedido de ventas"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_ambiente_form_view
+msgid "Pedidos y productos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__diff_to_invoice
+msgid "Pending to invoice"
+msgstr "Pendiente de factura"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__diff_to_orders
+msgid "Pending to sale order"
+msgstr "Pendiente de orden de venta"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__charge_percent
+msgid "Percentage recognized by factory"
+msgstr "Porcentaje reconocido por fábrica"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__percepciones
+msgid "Percepciones"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_promob_depto_wizard__pisos
+msgid "Pisos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__planos
+msgid "Planos"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.list.price,responsability_type:0
+msgid "Por defecto"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_list_price__percent
+msgid "Porcentaje"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__percent_discount
+#: model:ir.model.fields,field_description:re_promob.field_sale_franchise_category__discount_percent
+msgid "Porcentaje Descuento"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_res_partner__deviation_percent
+#: model:ir.model.fields,field_description:re_promob.field_res_users__deviation_percent
+msgid "Porcentaje de desvio en contratos"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_line_form_view
+msgid "Precio"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__problem_id
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Problem"
+msgstr "Problema"
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_problem_object
+#: model:ir.ui.menu,name:re_promob.menu_problem_object
+#: model_terms:ir.ui.view,arch_db:re_promob.problem_object_tree
+msgid "Problems"
+msgstr "Problemas"
+
+#. module: re_promob
+#: selection:sale.blanket.order,state:0
+msgid "Procesado"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.blanket.order,state:0
+msgid "Procesado Parcial"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.blanket.order,state:0
+msgid "Procesar a Futuro"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__claim_process_date
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__claim_process_date
+msgid "Process Date"
+msgstr "Fecha de procesamiento"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_product_product
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__product_ids
+msgid "Product"
+msgstr "Producto"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order_line__categ_id
+msgid "Product Category"
+msgstr "Categoría de producto"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "Unidad de medida del producto"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_mrp_production
+msgid "Production Order"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_line_form_view
+msgid "Producto"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_project_project
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__proyect_id
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_promob_def_form_view
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_promob_form_view
+msgid "Promob"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Promob Definitivo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_mrp_bom__promob_item_code
+msgid "Promob Item Code"
+msgstr "Promob Código Item"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_mrp_bom__promob_item_id
+msgid "Promob Item ID"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__project_id
+msgid "Proyecto"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.blanket.order,state:0
+msgid "Proyecto Creado"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__referencia
+msgid "REFERENCIA"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Recalcular Montos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__additional_charge
+msgid "Recargo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_wzd_aplicar_documento__recibo_id
+msgid "Recibo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_analytic_line__payment_group_id
+msgid "Recibo relacionado"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__payment_receipt_residual
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_pivot
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_tree
+msgid "Recibos aplicados"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__stored_payment_receipt_residual
+msgid "Recibos sin aplicar"
+msgstr ""
+
+#. module: re_promob
+#: selection:sale.blanket.order,state:0
+msgid "Reclamo en Evaluación"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__reference
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__repair_fund
+msgid "Repair Fund"
+msgstr "Fondo de Reparo"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_list
+msgid "Residual"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__residual_a
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__residual_a
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_list
+msgid "Residual A"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__residual_b
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__residual_b
+#: model_terms:ir.ui.view,arch_db:re_promob.blanket_order_report_list
+msgid "Residual B"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_report__residual
+msgid "Residual Balance"
+msgstr "Saldo residual"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Resumen Cuenta Corriente"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__amount_invoiced_residual
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__stored_amount_invoiced_residual
+msgid "Saldo acuerdo facturado sin cobrar"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__main_blanket_line_residual
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__stored_main_blanket_line_residual
+msgid "Saldo acuerdo sin facturar"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__saldo_residuales
+msgid "Saldo de Residuales"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__balance
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__stored_balance
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_tree
+msgid "Saldo del acuerdo"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_pivot
+#: model_terms:ir.ui.view,arch_db:re_promob.view_blanket_order_ctacte_tree
+msgid "Saldo facturado"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.search_re_promob_account_move_line
+msgid "Saldos Inicial Ds por vtas (ARS)"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_res_partner__sale_blanket_order_count
+#: model:ir.model.fields,field_description:re_promob.field_res_users__sale_blanket_order_count
+msgid "Sale Blanket Order Count"
+msgstr "Cantidad de acuerdos"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_claim_line
+msgid "Sale Claim Line"
+msgstr "Línea de reclamo de venta"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_order
+#: model:ir.model.fields,field_description:re_promob.field_assigned_invoice__order_id
+msgid "Sale Order"
+msgstr "Pedido de venta"
+
+#. module: re_promob
+#: selection:sale.order,state:0
+msgid "Sales Order"
+msgstr "Orden de Ventas"
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de Pedido de Ventas"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_payment_group__save_amount
+msgid "Save Amount"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,help:re_promob.field_sale_order_line__categ_id
+msgid "Select category for the current product"
+msgstr "Seleccione la categoría para el producto actual."
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__sena
+msgid "Sena"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_move__signo
+msgid "Signo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__state
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__state_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_line__state
+msgid "State"
+msgstr "Estado"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__state
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_inherit_search_view
+msgid "Status"
+msgstr "Estado"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__street
+msgid "Street"
+msgstr "Direccion"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__group_id
+msgid "Subgrupo de ventas"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_line__price_subtotal
+msgid "Subtotal"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_supply_object
+#: model:ir.ui.menu,name:re_promob.menu_supply_object
+#: model_terms:ir.ui.view,arch_db:re_promob.supply_object_tree
+msgid "Supplies"
+msgstr "Suministros"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__supply_id
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Supply"
+msgstr "Suministro"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__surety_financial_advanceund
+msgid "Surety Policy Financial Advance"
+msgstr "Póliza Caución por Anticipo Financiero"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__surety_repair_fund
+msgid "Surety Policy Repair Fund."
+msgstr "Póliza Caución por Fondo de Reparo."
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_order_line__task_id
+msgid "Tarea"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_project_task
+msgid "Task"
+msgstr "Tarea"
+
+#. module: re_promob
+#: model:ir.model.fields,help:re_promob.field_sale_order_line__task_id
+msgid "Task generated by the sales order item"
+msgstr "Tarea generada por el elemento del pedido de venta"
+
+#. module: re_promob
+#: code:addons/re_promob/models.py:4149
+#, python-format
+msgid "The factory recognized percentage must be between 0 and 100."
+msgstr ""
+
+#. module: re_promob
+#: code:addons/re_promob/sale_blanket_order.py:90
+#, python-format
+msgid "The field Advanve is null"
+msgstr "El valor anticipado esta vacio"
+
+#. module: re_promob
+#: code:addons/re_promob/sale_blanket_order.py:96
+#, python-format
+msgid "The field against_certification is null"
+msgstr "El valor contra certificación esta vacio"
+
+#. module: re_promob
+#: code:addons/re_promob/sale_blanket_order.py:92
+#, python-format
+msgid "The field exchange is null"
+msgstr "El valor del canje esta vacio"
+
+#. module: re_promob
+#: code:addons/re_promob/sale_blanket_order.py:94
+#, python-format
+msgid "The field upon_delivery is null"
+msgstr "El valor contra entrega esta vacio"
+
+#. module: re_promob
+#: code:addons/re_promob/sale_blanket_order.py:81
+#: code:addons/re_promob/sale_blanket_order.py:99
+#, python-format
+msgid "The payment terms do not match the value of the agreement"
+msgstr "Las condiciones de pago no coinciden con el valor del acuerdo"
+
+#. module: re_promob
+#: code:addons/re_promob/models.py:4061
+#, python-format
+msgid "The sum of the invoices is greater than the value of the Blanket Order"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__nombretipomueble
+msgid "Tipo Mueble"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_line_form_view
+msgid "Tipo Pedido"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_blanket_order_information_report__tipo_pedido
+msgid "Tipo de acuerdo"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_analytic_line__tipo_pedido
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__tipo_pedido
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_line__tipo_pedido
+msgid "Tipo de pedido"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto__product_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_depto_def__product_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__tipologia
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__tipologia
+msgid "Tipologia"
+msgstr "Tipología"
+
+#. module: re_promob
+#: selection:sale.order,invoice_status:0
+msgid "To Invoice"
+msgstr "Para facturar"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_account_invoice__to_apply
+msgid "To apply"
+msgstr "Aplicar"
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_promob_account_payment_group_tree
+msgid "Total"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__total_invoices
+msgid "Total Invoicing"
+msgstr "Facturación total"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__total_amount
+msgid "Total con impuestos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__total_orders
+msgid "Total in orders"
+msgstr "Total en ordenes"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_res_partner__transport_id
+#: model:ir.model.fields,field_description:re_promob.field_res_users__transport_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__transport_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_order__transport_id
+msgid "Transporte"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_drawer_object
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__drawer_id
+#: model:ir.ui.menu,name:re_promob.menu_drawer_object
+#: model_terms:ir.ui.view,arch_db:re_promob.drawer_object_tree
+msgid "Turn/Drawer"
+msgstr "Girar / Cajón"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__type_id
+#: model_terms:ir.ui.view,arch_db:re_promob.claim_lines_search
+msgid "Type"
+msgstr "Tipo"
+
+#. module: re_promob
+#: model:ir.actions.act_window,name:re_promob.action_type_object
+#: model:ir.ui.menu,name:re_promob.menu_type_object
+#: model_terms:ir.ui.view,arch_db:re_promob.type_object_tree
+msgid "Type of furniture"
+msgstr "Tipo de mobiliario"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_nomenclador__unidade
+msgid "UNIDADE"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__operating_unit_id
+msgid "Unidad Operativa"
+msgstr ""
+
+#. module: re_promob
+#: selection:account.analytic.line,tipo_pedido:0
+#: selection:sale.blanket.order,tipo_pedido:0
+msgid "Unifamiliar"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__upon_delivery
+msgid "Upon Delivery"
+msgstr "Contra Entrega"
+
+#. module: re_promob
+#: selection:sale.order,invoice_status:0
+msgid "Upselling Opportunity"
+msgstr "Oportunidad de upselling"
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__blanket_order
+msgid "Usar en contratos"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_condition__manual
+msgid "Usar nombre manual"
+msgstr ""
+
+#. module: re_promob
+#: code:addons/re_promob/sale_blanket_order.py:60
+#: code:addons/re_promob/sale_blanket_order.py:68
+#: code:addons/re_promob/sale_blanket_order.py:77
+#, python-format
+msgid "Usted es un usuario de las Franquicias, solo tiene las siguientes opciones 0, 10, 20 y 30"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_log__uid
+msgid "Usuario"
+msgstr ""
+
+#. module: re_promob
+#: model:res.groups,name:re_promob.group_sale_blanket_quality
+msgid "Usuario de Calidad"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Validar Reclamo"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "Volver a borrador/proyecto creado"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order__drafted
+msgid "Vuelto a borrador"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_claim_line__claim_id
+msgid "What is claimed?"
+msgstr "¿Qué se reclama?"
+
+#. module: re_promob
+#: code:addons/re_promob/account_payment_group.py:105
+#: code:addons/re_promob/sale_list_price.py:44
+#, python-format
+msgid "Ya existe una lista activa para:\n"
+" %s"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,help:re_promob.field_inv_blanket_wizard__partner_id
+msgid "You can find a contact by its Name, TIN, Email or Internal Reference."
+msgstr "Se puede encontrar un contacto por su nombre, cédula, correo electrónico o referencia interna. "
+
+#. module: re_promob
+#: code:addons/re_promob/models.py:1948
+#, python-format
+msgid "You must process the blanket order in order to bill!"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_assigned_invoice
+msgid "assigned.invoice"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_cause_id_wizard
+msgid "cause.id.wizard"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_cause_object
+msgid "cause.object"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_claim_object
+msgid "claim.object"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_color_object
+msgid "color.object"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_drawer_object
+msgid "drawer.object"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_explain_amount_wizard
+msgid "explain.amount.wizard"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_inv_blanket_wizard
+msgid "inv.blanket.wizard"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_material_object
+msgid "material.object"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_model_object
+msgid "model.object"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_problem_object
+msgid "problem.object"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_product_nomenclador
+msgid "product.nomenclador"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_promob_account_payment_wizard
+msgid "promob.account.payment.wizard"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_promob_depto_wizard
+msgid "promob.depto.wizard"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_promob_file_wizard
+msgid "promob.file.wizard"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_blanket_order_ambiente
+msgid "sale.blanket.order.ambiente"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_blanket_order_depto
+msgid "sale.blanket.order.depto"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_blanket_order_depto_def
+msgid "sale.blanket.order.depto.def"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_blanket_order_digest
+msgid "sale.blanket.order.digest"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_blanket_order_pedido
+msgid "sale.blanket.order.pedido"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_blanket_order_percepcion
+msgid "sale.blanket.order.percepcion"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_blanket_order_promob
+msgid "sale.blanket.order.promob"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_blanket_order_promob_def
+msgid "sale.blanket.order.promob.def"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_condition
+msgid "sale.condition"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_franchise_category
+msgid "sale.franchise.category"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_list_price
+msgid "sale.list.price"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_sale_log
+msgid "sale.log"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_supply_object
+msgid "supply.object"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_type_object
+msgid "type.object"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_product_product__unique_file_id
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_ambiente__unique_file_id
+msgid "unique_file_id"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_wzd_aplicar_documento
+msgid "wzd.aplicar_documento"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model,name:re_promob.model_wzd_exportacion_bom
+msgid "wzd.exportacion_bom"
+msgstr ""
+
+#. module: re_promob
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob__xml_contents
+#: model:ir.model.fields,field_description:re_promob.field_sale_blanket_order_promob_def__xml_contents
+msgid "xml_contents"
+msgstr ""
+
+#. module: re_promob
+#: code:addons/re_promob/models.py:3120
+#, python-format
+msgid "¡Complete los items a reclamar para continuar!"
+msgstr ""
+
+#. module: re_promob
+#: code:addons/re_promob/models.py:3077
+#, python-format
+msgid "¡Para validar este reclamo, por favor complete el Porcentaje reconocido pos fabrica!"
+msgstr ""
+
+#. module: re_promob
+#: code:addons/re_promob/models.py:3079
+#, python-format
+msgid "¡Para validar este reclamo, por favor complete la causa en los items reclamados"
+msgstr ""
+
+#. module: re_promob
+#: model_terms:ir.ui.view,arch_db:re_promob.re_sale_blanket_order_form_view
+msgid "¿Desea continuar?"
+msgstr ""
+
